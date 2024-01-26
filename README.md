@@ -1,3 +1,2 @@
-# TimerMessageBox
-Stellt eine MessageBox zur Verfügung, die nach einer einstellbaren Zeitspanne automatisch schließt.
-Siehe das enthaltene Demo-Projekt TimerMessageBoxDemo.
+# VishnuHelpBrowser
+Eigenständiges Browser-Modul (exe), welches die Vishnu Onlinehilfe darstellt.
