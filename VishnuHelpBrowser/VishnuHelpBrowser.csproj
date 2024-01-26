@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackageId>NetEti.$(AssemblyName)</PackageId>
+    <Title>$(AssemblyName) - Stellt die Vishnu Onlinehilfe in einem Browserfenster dar.</Title>
+    <Description>$(AssemblyName) - Stellt die Vishnu Onlinehilfe in einem Browserfenster dar.</Description>
+    <Company>NetEti</Company>
+    <Authors>Erik Nagel</Authors>
+    <Copyright>Copyright © $(Authors) 2024</Copyright>
+    <AssemblyVersion>8.1.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+ 	<PropertyGroup>
+   	<VishnuRoot>$(ProjectDir)../../..</VishnuRoot>
+   	<AssemblyRoot>$(VishnuRoot)/ReadyBin/Assemblies</AssemblyRoot>
+    <UserAssemblyRoot>$(ProjectDir)../../../ReadyBin/UserAssemblies</UserAssemblyRoot>
+    <RootNamespace>NetEti.CustomControls</RootNamespace>
+    <ApplicationIcon>Vishnu_multi.ico</ApplicationIcon>
+	</PropertyGroup>
+	<Import Project="$(ProjectDir)../../AddOn/proj/*" Condition="exists('$(ProjectDir)../../AddOn/proj')" />
+	<ItemGroup>
+	  <Content Include="Vishnu_multi.ico" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2210.55" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
