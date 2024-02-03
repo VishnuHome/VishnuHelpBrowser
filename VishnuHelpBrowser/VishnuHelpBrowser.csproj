@@ -12,7 +12,7 @@
     <Description>$(AssemblyName) - Stellt die Vishnu Onlinehilfe in einem Browserfenster dar.</Description>
     <Company>NetEti</Company>
     <Authors>Erik Nagel</Authors>
-    <Copyright>Copyright © $(Authors) 2024</Copyright>
+    <Copyright>Copyright © $(Authors) $([System.DateTime]::Now.Year)</Copyright>
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
   </PropertyGroup>
 
