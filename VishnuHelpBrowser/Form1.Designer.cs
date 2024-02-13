@@ -40,18 +40,20 @@
             webView21.DefaultBackgroundColor = Color.White;
             webView21.Dock = DockStyle.Fill;
             webView21.Location = new Point(0, 0);
+            webView21.Margin = new Padding(3, 2, 3, 2);
             webView21.Name = "webView21";
-            webView21.Size = new Size(1608, 932);
+            webView21.Size = new Size(1407, 699);
             webView21.TabIndex = 0;
             webView21.ZoomFactor = 1D;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1608, 932);
+            ClientSize = new Size(1407, 699);
             Controls.Add(webView21);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Vishnu Online Help";
             FormClosing += Form1_FormClosing;
