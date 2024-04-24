@@ -16,6 +16,11 @@
     <AssemblyVersion>8.1.0.0</AssemblyVersion>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <UseCurrentRuntimeIdentifier Condition="'$(UseCurrentRuntimeIdentifier)' == ''">true</UseCurrentRuntimeIdentifier>
+    <SelfContained Condition="'$(SelfContained)' == ''">false</SelfContained>
+  </PropertyGroup>
+
  	<PropertyGroup>
    	<VishnuRoot>$(ProjectDir)../../..</VishnuRoot>
    	<AssemblyRoot>$(VishnuRoot)/ReadyBin/Assemblies</AssemblyRoot>
