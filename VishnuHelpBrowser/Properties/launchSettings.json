@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VishnuHelpBrowser": {
+      "commandName": "Project",
+      "commandLineArgs": "HelpUrl=https://neteti.de/Vishnu.doc.en"
+    }
+  }
+}

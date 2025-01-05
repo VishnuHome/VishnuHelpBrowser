@@ -13,7 +13,7 @@
     <Company>NetEti</Company>
     <Authors>Erik Nagel</Authors>
     <Copyright>Copyright © $(Authors) $([System.DateTime]::Now.Year)</Copyright>
-    <AssemblyVersion>8.1.0.0</AssemblyVersion>
+    <AssemblyVersion>8.1.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -27,6 +27,7 @@
     <UserAssemblyRoot>$(ProjectDir)../../../ReadyBin/UserAssemblies</UserAssemblyRoot>
     <RootNamespace>NetEti.CustomControls</RootNamespace>
     <ApplicationIcon>Vishnu_Help_128.ico</ApplicationIcon>
+    <FileVersion>8.1.1.0</FileVersion>
 	</PropertyGroup>
 	<Import Project="$(ProjectDir)../../AddOn/proj/*" Condition="exists('$(ProjectDir)../../AddOn/proj')" />
 	<ItemGroup>
@@ -45,6 +46,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2210.55" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NetEti.CommandLineAccess">
+      <HintPath>..\..\..\ReadyBin\Assemblies\NetEti.CommandLineAccess.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

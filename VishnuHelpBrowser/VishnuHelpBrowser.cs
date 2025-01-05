@@ -23,9 +23,29 @@ namespace NetEti.CustomControls
             btnBack.Enabled = false;
             btnForward.Enabled = false;
             btnSearch.Enabled = true;
-            btnSearch.BackgroundImage = NetEti.CustomControls.Properties.Resources.search;
-            this._webUrlString = "https://neteti.de/Vishnu.Doc";
+            btnSearch.BackgroundImage = Properties.Resources.search;
             this._keywordToPages = new();
+            this._webUrlString = "https://neteti.de/Vishnu.doc.de";
+        }
+
+        /// <summary>
+        /// Parametrisierter Konstruktor - übernimmt eine URL als string.
+        /// </summary>
+        /// <param name="webUrlString">Eine URL als string.</param>
+        public VishnuHelpBrowser(string? webUrlString) : this()
+        {
+            if (!String.IsNullOrEmpty(webUrlString))
+            {
+                this._webUrlString = webUrlString;
+            }
+            else
+            {
+                string tmpUrl = Properties.Settings.Default.WebUrlString;
+                if (!String.IsNullOrEmpty(tmpUrl))
+                {
+                    this._webUrlString = tmpUrl;
+                }
+            }
         }
 
         private string _webUrlString;
@@ -77,7 +97,6 @@ namespace NetEti.CustomControls
                 Location = NetEti.CustomControls.Properties.Settings.Default.WindowLocation;
                 Size = NetEti.CustomControls.Properties.Settings.Default.WindowSize;
             }
-            _webUrlString = NetEti.CustomControls.Properties.Settings.Default.WebUrlString;
 
             webView21.CoreWebView2InitializationCompleted += WebView21_CoreWebView2InitializationCompleted;
 

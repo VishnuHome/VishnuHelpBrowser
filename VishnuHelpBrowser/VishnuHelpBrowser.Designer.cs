@@ -130,7 +130,7 @@
             label1.Name = "label1";
             label1.Size = new Size(232, 17);
             label1.TabIndex = 4;
-            label1.Text = "Vishnu - der logische Prozess-Monitor";
+            label1.Text = "";
             // 
             // Form1
             // 
