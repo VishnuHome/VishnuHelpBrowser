@@ -17,6 +17,7 @@ _Mock/
 Job_und_Snapshot_Pfade.txt
 devenvErrorLog.txt
 copyErrorLog.txt
+launchSettings.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
