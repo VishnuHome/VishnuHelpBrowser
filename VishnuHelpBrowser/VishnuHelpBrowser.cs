@@ -101,6 +101,9 @@ namespace NetEti.CustomControls
             webView21.CoreWebView2InitializationCompleted += WebView21_CoreWebView2InitializationCompleted;
 
             // Setzen der URL, die das WebView2-Steuerelement laden soll
+            
+            
+            
             this.webView21.Source = new Uri(_webUrlString);
         }
 

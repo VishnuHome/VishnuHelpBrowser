@@ -9,6 +9,7 @@
 *.csproj.user
 *.userosscache
 *.sln.docstates
+launchSettings.json
 
 _Archiv/
 _Develop/
